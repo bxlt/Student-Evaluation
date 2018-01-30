@@ -1,0 +1,200 @@
+<div class="ui indented very basic segment">
+  <h1 class="ui header">Sprint {{sprintNum}}</h1>
+  <div class="ui teal label">
+    Duration:
+    <div class="detail">
+      {{sprint.start_date}} to {{sprint.end_date}}
+    </div>
+  </div>
+  <div class="ui very basic segment">
+    <span class="ui header">Versions:</span>
+    <div class="ui small green button" [routerLink]="sprint.versions.user_story">User Story</div>
+    <div class="ui small blue button" [routerLink]="sprint.versions.persona">Personas</div>
+    <a class="ui small purple button" [href]="sprint.zenhub" target="_blank">Zenhub Board</a>
+  </div>
+</div>
+<div class="ui divider"></div>
+<div class="ui indented very basic segment">
+  <div class="ui grid">
+    <div class="row">
+      <div class="ten wide column">
+        <h2 class="ui header">User Stories</h2>
+        <div class="ui divided bulleted list">
+          <div class="item" *ngFor="let story of sprint.user_stories">
+            <div class="content">
+              <div class="header">{{story.user_story}}</div>
+              <div class="description">Story Points: {{story.story_points}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui divider"></div>
+<div class="ui indented very basic segment">
+  <div class="ui grid">
+    <div class="row">
+      <div class="ten wide column">
+        <h2 class="ui header">Division of Tasks</h2>
+        <div class="ui divided ordered list">
+          <div class="item" *ngFor="let task of sprint.tasks">
+            <div class="content">
+              <div class="header">{{task.task}}</div>
+              <div class="description">{{task.description}}</div>
+              <div class="extra content">Story Points: {{task.story_points}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui divider"></div>
+<div class="ui indented very basic segment">
+  <div class="ui grid">
+    <div class="row">
+      <div class="fifteen wide column">
+        <h2 class="ui header">Assignment of Tasks</h2>
+        <div class="ui very basic segment" *ngFor="let member of ['Bill', 'Vethursan', 'Rakin', 'Kevin']">
+          <h4 class="ui header">{{member}}</h4>
+          <table class="ui table">
+            <thead>
+              <tr>
+                <th width="7%">Estimated Hrs.</th>
+                <th>Tasks</th>
+                <th width="40%">Dependency</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let task of sprint.task_division[member]">
+                <td>{{task.estimated_hours}}</td>
+                <td>{{task.task}}</td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item" *ngFor="let dependency of task.dependencies">
+                      {{dependency}}
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="sprint.sprint_plan">
+  <div class="ui divider"></div>
+  <div class="ui indented very basic segment">
+    <div class="ui grid">
+      <div class="row">
+        <div class="ten wide column">
+          <h2 class="ui header">Sprint Plan</h2>
+          <img class="ui fluid image" [src]="sprint.sprint_plan">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="sprint.sprint_exec">
+  <div class="ui divider"></div>
+  <div class="ui indented very basic segment">
+    <div class="ui grid">
+      <div class="row">
+        <div class="ten wide column">
+          <h2 class="ui header">Sprint Execution Report</h2>
+          <img class="ui fluid image" [src]="sprint.sprint_exec">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ui divider"></div>
+<div class="ui indented very basic segment">
+  <div class="ui grid">
+    <div class="row">
+      <div class="ten wide column">
+        <h2 class="ui header">Burndown Chart</h2>
+        <img class="ui fluid image" [src]="sprint.burndown">
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="sprint.sprint_tasks_before && sprint.sprint_tasks_after">
+  <div class="ui divider"></div>
+  <div class="ui indented very basic segment">
+    <div class="ui grid">
+      <div class="row">
+        <div class="six wide column">
+          <h3 class="ui header">Before Sprint</h3>
+          <img class="ui fluid image" [src]="sprint.sprint_tasks_before">
+        </div>
+        <div class="six wide column">
+          <h3 class="ui header">After Sprint</h3>
+          <img class="ui fluid image" [src]="sprint.sprint_tasks_after">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="sprint.sprint_exec">
+  <div class="ui divider"></div>
+  <div class="ui indented very basic segment">
+    <div class="ui grid">
+      <div class="row">
+        <div class="ten wide column">
+          <h2 class="ui header">Code Review</h2>
+          <iframe width="800" height="450"
+            [src]="sprint.code_review.link">
+          </iframe>
+        </div>
+      </div>
+      <div class="row">
+        <div class="ten wide column">
+          <h3 class="ui header">Code Review Summary</h3>
+          <div *ngFor="let item of ['rakin', 'bill', 'vethursan', 'kevin']">
+            <h4 class="ui top attached header">{{item}}'s summary</h4>
+            <div class="ui attached segment">
+              <div class="ui bulleted list">
+                <div class="item" *ngFor="let point of sprint.code_review.summaries[item]">
+                  {{point}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="sprint.reflections">
+  <div class="ui divider"></div>
+  <div class="ui indented very basic segment">
+    <div class="ui grid">
+      <div class="row">
+        <div class="ten wide column">
+          <h3 class="ui header">Sprint Reflection</h3>
+          <h4 class="ui top attached header">What went well</h4>
+          <div class="ui attached segment">
+            <div class="ui bulleted list">
+              <div class="item" *ngFor="let point of sprint.reflections.good">
+                {{point}}
+              </div>
+            </div>
+          </div>
+          <h4 class="ui top attached header">What didn't go so well</h4>
+          <div class="ui attached segment">
+            <div class="ui bulleted list">
+              <div class="item" *ngFor="let point of sprint.reflections.bad">
+                {{point}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

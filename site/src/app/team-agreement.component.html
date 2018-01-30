@@ -1,0 +1,382 @@
+<t-sidebar [selected]="'agreement'">
+  <div class="ui basic indented segment" id="team_agreement">
+    <h1 class="ui header">
+      Team Agreement
+    </h1>
+  </div>
+  <div class="ui divider"></div>
+  <div  id="agreement_content">
+    <div class="ui basic indented segment">
+      <div class="ui grid">
+        <div class="twelve wide column">
+          <h3 class="ui dividing header" id="method_of_communication">Method of Communication</h3>
+          <table class="ui celled definition table">
+            <thead>
+              <tr>
+                <th width="20%"></th>
+                <th>When method is used</th>
+                <th width="20%">Response Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Slack</td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item">Main communication with TA</div>
+                    <div class="item">Updating TA on the progress of the project</div>
+                    <div class="item">Addressing concerns with TA</div>
+                    <div class="item">Setting TA meetings</div>
+                  </div>
+                </td>
+                <td>Within 1 day</td>
+              </tr>
+              <tr>
+                <td>Facebook Messenger</td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item">General updates and communication with team members</div>
+                    <div class="item">Quick questions that do not need to be documented (e.g. confirming location of meetings)</div>
+                  </div>
+                </td>
+                <td>Within 6 hours</td>
+              </tr>
+              <tr>
+                <td>Email</td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item">Important questions/actions that requires the all team members to see.</div>
+                    <div class="item">Questions/Actions that may need to be documented.</div>
+                    <div class="item">Setting up meetings with team</div>
+                  </div>
+                </td>
+                <td>Within 1 day</td>
+              </tr>
+              <tr>
+                <td>Meetings</td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item">
+                    Update the team and TA on the progress of the project
+                      <div class="list">
+                        <div class="item">What was done in the past week?</div>
+                        <div class="item">What will be done this week?</div>
+                        <div class="item">Any questions or roadblocks?</div>
+                      </div>
+                    </div>
+                    <div class="item">More on this <a [scrollTo]="'meetings'">here</a>.</div>
+                  </div>
+                </td>
+                <td>Scheduled</td>
+              </tr>
+              <tr class="warning">
+                <td>
+                  <div class="item" id="phone_call" data-content="Only for Emergency">
+                    <i class="attention icon"></i>
+                    Phone Calls
+                  </div>
+                </td>
+                <td>
+                  <div class="ui bulleted list">
+                    <div class="item">
+                    Only for emergency uses:
+                      <div class="list">
+                        <div class="item">
+                          Team member is not responding through other communication
+                        </div>
+                        <div class="item">
+                          Important update to a team member
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><i class="minus icon"></i></td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="ui dividing header" style="margin-top: 3em;" id="meetings">Meetings</h3>
+          <table class="ui celled table">
+            <thead>
+              <tr>
+                <th width="15%">Date  &amp; Time</th>
+                <th width="15%">Location</th>
+                <th>Description</th>
+                <th width="15%">Required Members</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monday 5pm - 6pm</td>
+                <td>IC Building <br>(Tentative Location)</td>
+                <td>
+                  <h4 class="ui header">Scrum Meeting</h4>
+                  <div class="ui bulleted list">
+                    <div class="item">Face-to-Face Meeting</div>
+                    <div class="item">Update everyone on the progress of individual tasks</div>
+                    <div class="item">Address and resolve any concerns</div>
+                    <div class="item">Make sure everyone is fully aware of the status of the project in its entirety.</div>
+                  </div>
+                  <div class="ui divider"></div>
+                  <h5 class="ui header">Preparations</h5>
+                  <div class="ui bulleted list">
+                    <div class="item">Update Github beforehand</div>
+                    <div class="item">Every team member prepares what they did last week/what they will do this week</div>
+                  </div>
+                </td>
+                <td>All team members</td>
+              </tr>
+              <tr>
+                <td>Wednesdays 5pm - 6:30pm</td>
+                <td>IC Building <br>(Tentative Location)</td>
+                <td>
+                  <h4 class="ui header">Meeting with TA</h4>
+                  <div class="ui bulleted list">
+                    <div class="item">Face-to-Face Meeting</div>
+                    <div class="item">Interview with TA</div>
+                    <div class="item">Update TA on the progress of the project</div>
+                    <div class="item">Answer questions from TA</div>
+                  </div>
+                  <div class="ui divider"></div>
+                  <h5 class="ui header">Preparations</h5>
+                  <div class="ui bulleted list">
+                    <div class="item">Update Github beforehand</div>
+                    <div class="item">Every team member should fully understand overall project status
+                                      (either by reviewing previous commits or discussing with the team)</div>
+                  </div>
+                </td>
+                <td>All team members + TA</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="ui dividing header" style="margin-top: 3em;" id="version_control">Version Control</h3>
+          <div class="ui list">
+            <div class="item">
+              <i class="green check icon"></i>
+              <div class="content">
+                <div class="header">Descriptive Commit Message</div>
+                <div class="description">
+                  Commit message headers should be verbose, describing what/where the changes are/were made. 
+                  If additional details are needed, it should go in the body.
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="red remove icon"></i>
+              <div class="content">
+                <div class="header">Commit message header should not exceed 50 characters</div>
+                <div class="description">
+                  Additional information should be in the body.
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="green check icon"></i>
+              <div class="content">
+                <div class="header">Master branch must always build and run.</div>
+                <div class="description">
+                  Any branches should be well tested (i.e., with sufficient test cases) before merging to the Master branch. If there is a bug on the Master branch, the team will evaluate the bug. If it's a major bug, the Master branch will be rebased to the a previous commit. Otherwise, the bug will be fixed promptly.
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="green check icon"></i>
+              <div class="content">
+                <div class="header">A new branch will be created for each feature/release</div>
+                <div class="description">
+                  Branches will be locked after feature/release has been merged to Master.
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="red remove icon"></i>
+              <div class="content">
+                <div class="header">Auto-generated files should not be commited</div>
+                <div class="description">
+                  These files should be properly removed in .gitignore.
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <i class="green check icon"></i>
+              <div class="content">
+                <div class="header">ZenHub for project tracking</div>
+                <div class="description">
+                  All features should be a task in ZenHub. Commits will be associated to a feature.
+                </div>
+              </div>
+            </div>
+          </div>
+          <h3 class="ui dividing header" style="margin-top: 3em;" id="division_of_work">Division of Work</h3>
+          <table class="ui definition celled table">
+            <thead>
+              <tr>
+                <th width="25%"></th>
+                <th>Responsibility</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Designing Logo</td>
+                <td>Vethursan Jegatheeswaran</td>
+              </tr>
+              <tr>
+                <td>Code Quality</td>
+                <td>Team during Code Review</td>
+              </tr>
+              <tr>
+                <td>Code Style Standards</td>
+                <td>Team</td>
+              </tr>
+              <tr>
+                <td>Code Style</td>
+                <td>Team</td>
+              </tr>
+              <tr>
+                <td>Testing</td>
+                <td>Team</td>
+              </tr>
+              <tr>
+                <td>Making sure everyone is on track</td>
+                <td>Rakin Uddin</td>
+              </tr>
+              <tr>
+                <td>Managing documentation</td>
+                <td>Kevin Gao</td>
+              </tr>
+              <tr>
+                <td>Submitting Work</td>
+                <td>Rakin Uddin <br> <b>Reviewed by:</b> Team</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 class="ui dividing header" style="margin-top: 3em;" id="contingency_planning">Contingency Planning</h3>
+          <div class="ui warning icon message">
+            <i class="warning icon"></i>
+            <div class="content">
+              To try to ensure the project goes as smoothly as possible, we want to plan out actions for some emergency cases.
+            </div>
+          </div>
+          <table class="ui celled table">
+            <thead>
+              <tr>
+                <th width="40%">Emergency Situation</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="error">
+                  <div class="ui tiny header">Team Member unavailable for a period of time.</div>
+                  (E.g. sick, busy)
+                </td>
+                <td>
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Team member should let the rest of the team be aware of their unavailability ASAP
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Schedule emergency meeting (within 1 day) so the team can re-distribute the tasks for the week
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Speak to TA if several members are unavailable for a sprint to see if tasks can be reduced
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="error">
+                  <div class="ui tiny header">Team Member unavailable permanently</div>
+                  (E.g. dropped course)
+                </td>
+                <td>
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Team member should let the rest of the team be aware of their unavailability ASAP
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Schedule emergency meeting (within 1 day) so the team can re-distribute the tasks for the week
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Make sure TA is aware that a team member is permanently unavailable
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      Re-access the project to see if it could still be completed on time or if features need to be dropped
+                    </div>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td class="error">
+                  <div class="ui tiny header">Team member is academically dishonest</div>
+                </td>
+                <td>
+                  <div class="ui list">
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      All team members need to review the feature from a branch before merging the branch to production
+                    </div>
+                    <div class="item">
+                      <i class="green check icon"></i>
+                      During code reviews, if academic dishonesty is found in a feature, Master branch needs to be rebased to a previous commit when the feature wasn't present or the feature needs to be removed ASAP.
+                    </div>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="three wide column">
+          <div class="ui vertical sticky text menu" id="agreement_menu">
+            <a class="ui header item"
+              [scrollTo]="'team_agreement'"
+              (click)="sideSelected='team_agreement'">
+              Team Agreement
+            </a>
+            <a class="item"
+              [scrollTo]="'method_of_communication'"
+              (click)="sideSelected='method_of_communication'"
+              [class.active]="sideSelected=='method_of_communication'">
+              Method of Communication
+            </a>
+            <a class="item"
+              [scrollTo]="'meetings'"
+              (click)="sideSelected='meetings'"
+              [class.active]="sideSelected=='meetings'">
+              Meetings
+            </a>
+            <a class="item"
+              [scrollTo]="'version_control'"
+              (click)="sideSelected='version_control'"
+              [class.active]="sideSelected=='version_control'">
+              Version Control
+            </a>
+            <a class="item"
+              [scrollTo]="'division_of_work'"
+              (click)="sideSelected='division_of_work'"
+              [class.active]="sideSelected=='division_of_work'">
+              Division of Work
+            </a>
+            <a class="item"
+              [scrollTo]="'contingency_planning'"
+              (click)="sideSelected='contingency_planning'"
+              [class.active]="sideSelected=='contingency_planning'">
+              Contingency Planning
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</t-sidebar>
+<div style="height: 20em;"></div>
+
+<tpets-footer></tpets-footer>

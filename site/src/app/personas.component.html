@@ -1,0 +1,61 @@
+<div style="min-height: 100%;">
+  <t-sidebar [selected]="'persona'">
+    <div class="ui basic indented segment" id="personas">
+      <h1 class="ui header">
+        Personas
+      </h1>
+      <div class="ui compact menu">
+        <div class="header item">Versions:</div>
+        <a class="item" *ngFor="let vers of versions"
+          [class.active]="vers.code==selectedVersion"
+          (click)="switchVersion(vers.code)">
+          {{vers.display}}
+        </a>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div id="persona_content" *ngIf="found">
+      <div class="ui basic indented segment">
+        <div class="ui grid">
+          <div class="twelve wide column">
+            <div class="ui list">
+              <div *ngFor="let type of personas" class="item" [id]="type.type">
+                <div class="ui large header">{{type.type}}</div>
+                <div class="ui divider"></div>
+                <div class="ui list">
+                  <div class="ui piled attached segment" *ngFor="let persona of type.personas">
+                      <div class="ui header">{{persona.name}}</div>
+                      <div class="ui bulleted list">
+                        <div class="item" *ngFor="let desc of persona.description">
+                          {{desc}}
+                        </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="three wide column">
+            <div class="ui vertical sticky text menu" id="persona_menu">
+              <a class="ui header item"
+                [scrollTo]="'personas'"
+                (click)="sideSelected='personas'">
+                Personas
+              </a>
+              <a *ngFor="let type of personas" class="item"
+                [scrollTo]="type.type"
+                (click)="sideSelected=type.type"
+                [class.active]="sideSelected==type.type">
+                {{type.type}}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!found">
+      <t-notfound-item></t-notfound-item>
+    </div>
+  </t-sidebar>
+</div>
+<tpets-footer></tpets-footer>

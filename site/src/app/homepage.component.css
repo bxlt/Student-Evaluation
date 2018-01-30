@@ -1,0 +1,81 @@
+.home.menu {
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  -webkit-transition: 0.5s; /* Safari */
+  transition: 0.5s;
+  height: 60px;
+  box-shadow: 0 1px 0 rgba(12,13,14,0.1), 0 1px 3px rgba(12,13,14,0.1), 0 4px 20px rgba(12,13,14,0.035), 0 1px 1px rgba(12,13,14,0.025);
+}
+.open.home.menu {
+  height: 150px;
+  background-color: transparent;
+  box-shadow:none;
+}
+
+.home.img {
+  height: 90%;
+  background-image: url('http://gen4congress.com/wp-content/uploads/2017/08/skillful-design-light-wood-floor-background-1-light-wood-floor-background.jpg');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 600px;
+}
+.home.img > .container {
+  height: 100%;
+  display: block;
+  align-items: center;
+  -webkit-align-items: center;
+  padding: 15rem 0em;
+}
+
+.home.introduction {
+  width: 100%;
+  text-align: center;
+}
+.huge.header {
+  font-size: 5em;
+}
+
+.footer.segment {
+  margin-top: 3em;
+}
+
+.goals.segment {
+  border-radius: 0;
+}
+
+.strength.segment {
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.team.header {
+  font-size: 3em;
+}
+
+.reveal.container {
+  width: 200px;
+  height: 100px;
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+}
+.reveal.container .element {
+  width: 200px;
+  height: 100px;
+  position: absolute;
+  opacity: 0;
+  -moz-transition: 0.25s;
+  -o-transition: 0.25s;
+  -webkit-transition: 0.25s; /* Safari */
+  transition: 0.25s;
+}
+
+.reveal.container:not(:hover) .top.element {
+  opacity: 1;
+}
+
+.reveal.container:hover .bottom.element {
+  opacity: 1;
+}

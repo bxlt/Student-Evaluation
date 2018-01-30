@@ -1,0 +1,32 @@
+<div style="min-height: 100%;">
+  <t-sidebar [selected]="'code_review'">
+    <div class="ui basic indented segment" id="personas">
+      <h1 class="ui header">
+        Code Review Strategy
+      </h1>
+    </div>
+    <div class="ui divider"></div>
+    <div class="ui basic indented segment">
+      <div class="ui grid">
+        <div class="twelve wide column">
+          <table class="ui celled table">
+            <tbody>
+              <tr>
+                <td width="30%">Before the Review</td>
+                <td><p>Every member of the team is required to have some level of understanding of the architecture of the product beforehand, by quickly reviewing the project files beforehand or through group discussions. This ensures that all team members know how features are converted into modules and it opens up discussions on the application from an architectural perspective.</p></td>
+              </tr>
+              <tr>
+                <td>During the Review</td>
+                <td><p>Each team member reviews aspects of the code that they did not develop themselves in order to obtain objective feedback of the code.</p><p>These aspects can include the design of an entire module or specific parts of a module, documentation, critiques of test coverage, consistency of naming conventions and variable names package-wide.</p><p>All team members take notes regarding these aspects and develops constructive feedback to enhance that particular aspect of code. It is stronger to provide what an example of the potential correct code could be (i.e., if naming conventions are not upheld, then propose a convention that everyone can agree with)</p></td>
+              </tr>
+              <tr>
+                <td>After the Review</td>
+                <td><p>In a round-robin fashion, each team member discusses with the others about their constructive feedback. They discuss benefits of the proposed changes and its impact on the project (will it hold up the main development of the project?). Changes agreed on by the team should be implemented immediately or should be in the process of doing so.)</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </t-sidebar>
+</div>

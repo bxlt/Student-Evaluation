@@ -1,0 +1,30 @@
+.indented.segment {
+  margin: 2em;
+  width: 100%;
+}
+.cursor {
+  cursor: pointer;
+}
+
+#user_story_table th {
+  cursor: pointer;
+}
+.priority.one {
+  background-color: #ff9999;
+}
+
+.priority.two {
+  background-color: #ffbb99;
+}
+
+.priority.three {
+  background-color: #ffff99;
+}
+
+.priority.four {
+  background-color: #ddff99;
+}
+
+.priority.five {
+  background-color: #99ff99;
+}

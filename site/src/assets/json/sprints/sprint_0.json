@@ -1,0 +1,98 @@
+{
+  "versions":{
+    "user_story": "/user_story/1",
+    "persona": "/persona/1"
+  },
+  "start_date": "10-16-2017",
+  "end_date": "10-22-2017",
+  "burndown": "/assets/img/burndown/burndown_0.png",
+  "zenhub": "https://github.com/CSCC01F17/L02_15/pulls#boards?repos=103757623",
+  "user_stories": [{
+    "user_story": "As a professor, I must be able to create problems so students can have problems to do.",
+    "story_points": 28
+  }],
+  "tasks": [{
+    "task": "Set-up Python project",
+    "story_points": 3,
+    "description": "Create a structured Python project with a project management system. Python project should include instructions on: how to build the project, how to deploy the project, and how to add new dependencies to the project."
+  },{
+    "task": "Ramp up on Python and study Python project structure",
+    "story_points": 12,
+    "description": "Ramp up on the basics of Python and understand the fundamentals. Also, study on how to use python management tools and how to use the pip command."
+  },{
+    "task": "Create UI textbox for professors to input their question",
+    "story_points": 5,
+    "description": "Study Python's Tkinter and see how to create a textbox using Tkinter. Create a textbox in our Python application that allows input of a question."
+  },{
+    "task": "Decide on which SQL to use for the back-end",
+    "story_points": 1,
+    "description": "Consider different databases and decide on the best database to use for our back-end. For example, you may want to research MySQL, MongoDB, PostgreSQL, etc"
+  },{
+    "task": "Design MySQL database schemas so professors can add questions to the database",
+    "story_points": 1,
+    "description": "Design the SQL Database schemas to support addition of questions for the professor. Be sure to make the table scalable and flexible."
+  },{
+    "task": "Document the sprint by adding in the sprint backlog and burndown chart",
+    "story_points": 6,
+    "description": "Create new tab in front-end for `Sprint Backlogs`. Add the sprint back log with the user story for the sprint, the tasks that were broken down for the sprint, the estimated time it would take for each tasks, descriptions for each tasks, assignment of the tasks for each team member, and add a burndown chart."
+  }],
+  "task_division": {
+    "Rakin":[{
+      "task": "Study Python project structure",
+      "estimated_hours": 3,
+      "dependencies": []
+    },{
+      "task": "Set up Python project",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Study Python project structure (Rakin)"
+      ]
+    }],
+    "Vethursan":[{
+      "task": "Study Python project structure",
+      "estimated_hours": 3,
+      "dependencies": []
+    },{
+      "task": "Create UI textbox for professors to input their question",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Study Python project structure (Vethursan)",
+        "Set up Python project (Rakin)"
+      ]
+    }],
+    "Bill":[{
+      "task": "Study Python project structure",
+      "estimated_hours": 3,
+      "dependencies": []
+    },{
+      "task": "Decide on which SQL to use for the back-end",
+      "estimated_hours": 1,
+      "dependencies": [
+        "Study Python project structure"
+      ]
+    },{
+      "task": "Design MySQL database schemas so professors can add questions to the database",
+      "estimated_hours": 1,
+      "dependencies": [
+        "Decide on which SQL to use for the back-end (Bill)"
+      ]
+    },{
+      "task": "Create UI textbox for professors to input their question (Assisting Vethursan)",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Study Python project structure (Bill)",
+        "Set up Python project (Rakin)"
+      ]
+    }],
+    "Kevin":[{
+      "task": "Study Python project structure",
+      "estimated_hours": 3,
+      "dependencies": []
+    },{
+      "task": "Update the documentation and add Sprint 0 backlog + Burndown chart.",
+      "estimated_hours": 6,
+      "dependencies": [
+      ]
+    }]
+  }
+}

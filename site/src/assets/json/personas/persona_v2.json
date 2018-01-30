@@ -1,0 +1,75 @@
+[
+  {
+   "type":"Students",
+    "personas": [
+      {
+        "name": "Miley Cyrus",
+        "gender": "female",
+        "description": [
+          "Female",
+          "18 year old student at the University of Toronto Scarborough",
+          "Specialist in Psychology",
+          "Familiar with technology such as Microsoft Office, Netflix and Facebook",
+          "Likes to take notes on her laptop",
+          "No programming experience or knowledge",
+          "Uses her phone in most cases, uses BlackBoard on mobile",
+          "Doesn't trust online homework systems because of bad experiences due to bugs and glitches",
+          "Doesn't like how educational tools look bland and have a rugged design/interface",
+          "Likes to solve problems on paper"
+
+        ]
+      },
+      {
+        "name": "Aubrey Graham",
+        "gender": "male",
+        "description": [
+          "Male",
+          "18 year old student at the University of Toronto Scarborough",
+          "Specialist in Sociology and minor in Computer Science",
+          "Proficient with technology, has programming experience in Java and C",
+          "Prefers to work on his laptop - everything from taking notes to doing assignments",
+          "Likes it when things are simple and easy to use",
+          "Doesn't care for extra features as long as he can get the job done",
+          "Prefers to have everything synchronized so he can access things from multiple devices (i.e., phone, laptop and smartwatch)"
+
+        ]
+      }
+    ]
+  },
+  {
+    "type":"Professors",
+    "personas": [
+      {
+        "name": "Dr. Ryan Tishkovsky",
+        "gender": "male",
+        "description": [
+          "Male",
+          "51 year old professor at University of Toronto Scarborough",
+          "Teaches introductory level statistics courses",
+          "Not a programmer, but uses technology frequently for basic tasks such as e-mail, writing assignments in Microsoft Word, and presentations in Microsoft PowerPoint",
+          "Dislikes writing assignment questions from scratch; prefers to have a template where he only needs to change specific numbers",
+          "Has a strong glasses prescription",
+          "Not an avid phone user, carries a flip phone with his family/emergency contacts in it",
+          "Very proficient with LaTeX and MATLAB as he used it throughout most of his career",
+          "Meets with TAs for each of his courses once a week to discuss teaching objectives for the following week"
+        ]
+      },
+      {
+        "name": "Dr. Emilia Jenkins",
+        "gender": "female",
+        "description": [
+          "Female",
+          "28 year old professor at the University of Toronto Scarborough",
+          "Graduated with a Bachelor's in Computer Science and Software Engineering",
+          "Masters and Ph.D in Computer Science from Carnegie Mellon University",
+          "4+ years of software engineering experience in the industry before teaching at the university",
+          "Avid programmer, prefers to code solutions for various tasks (i.e., assignments, tests and course materials)",
+          "Does not use phone other than for communication purposes (i.e., texting, calling). Uses a high-end laptop frequently",
+          "Meets with her TAs through a custom messaging solution she made herself",
+          "Capable of learning new technologies if she sees a use case in them",
+          "Does not like sitting down to mark assignments and exams, prefers to hand them off to TAs and get the overall scores back"
+        ]
+      }
+    ]
+  }
+]

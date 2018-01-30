@@ -1,0 +1,129 @@
+{
+  "versions":{
+    "user_story": "/user_story/3",
+    "persona": "/persona/3"
+  },
+  "start_date": "10-31-2017",
+  "end_date": "11-06-2017",
+  "burndown": "/assets/img/burndown/burndown_2.png",
+  "zenhub": "https://github.com/CSCC01F17/L02_15/pulls#boards?repos=103757623",
+  "user_stories": [{
+    "user_story": "As a professor, I must be able to create problems so students can have problems to do.",
+    "story_points": 28
+  },{
+    "user_story": "As a student, I must be able to select and a view a problem so I can practise on it.",
+    "story_points": 9
+  }],
+  "tasks": [{
+    "task": "Create SQL schemas for questions",
+    "story_points": 2,
+    "description": "Create all CREATE TABLE schemas for questions for SQL so we can create the tables in MySQL."
+  },{
+    "task": "Design the API route to add questions",
+    "story_points": 3,
+    "description": "Design the API route for the front end to add questions to the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Design the API route to get questions",
+    "story_points": 3,
+    "description": "Design the API route for the front end to getting questions from the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Create API route to add questions to database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for adding questions and implement the API route."
+  },{
+    "task": "Create API route for getting questions from database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for getting questions and implement the API route."
+  },{
+    "task": "Create SQL schemas for assignments",
+    "story_points": 2,
+    "description": "Create all CREATE TABLE schemas for assignments for SQL so we can create the tables in MySQL."
+  },{
+    "task": "Design the API route to add assignments",
+    "story_points": 3,
+    "description": "Design the API route for the front end to add assignments to the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Design the API route to get assignments",
+    "story_points": 3,
+    "description": "Design the API route for the front end to getting assignments from the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Create API route to add assignments to database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for adding assignments and implement the API route."
+  },{
+    "task": "Create API route for getting assignments from database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for getting assignments and implement the API route."
+  },{
+    "task": "Document the sprint by adding in the sprint backlog and burndown chart",
+    "story_points": 3,
+    "description": "Create new tab in front-end for `Sprint Backlogs`. Add the sprint back log with the user story for the sprint, the tasks that were broken down for the sprint, the estimated time it would take for each tasks, descriptions for each tasks, assignment of the tasks for each team member, and add a burndown chart."
+  }],
+  "task_division": {
+    "Rakin":[{
+      "task": "Design the API route to get questions",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Create SQL schemas for adding questions (Bill)"
+      ]
+    },{
+      "task": "Create API route for getting questions from database",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Design the API route to get questions (Rakin)"
+      ]
+    }],
+    "Vethursan":[{
+      "task": "Create SQL schemas for assignments",
+      "estimated_hours": 2,
+      "dependencies": []
+    },{
+      "task": "Design API for adding assignments",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Create SQL schemas for assignments (Vethursan)"
+      ]
+    },{
+      "task": "Implement the API route for adding assignments",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Create SQL schemas for assignments (Vethursan)"
+      ]
+    }],
+    "Bill":[{
+      "task": "Create SQL schemas for adding questions",
+      "estimated_hours": 1,
+      "dependencies": []
+    },{
+      "task": "Design API for getting assignments",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Create SQL schemas for assignments (Vethursan)"
+      ]
+    },{
+      "task": " Implement the API route for getting assignments",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Create SQL schemas for assignments (Vethursan)"
+      ]
+    }],
+    "Kevin":[{
+      "task": "Design the API route to add questions",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Create SQL schemas for questions (Bill)"
+      ]
+    },{
+      "task": "Create API route for adding questions from database",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Design the API route to add questions (Kevin)"
+      ]
+    },{
+      "task": "Update the documentation and add Sprint 1 backlog + Burndown chart.",
+      "estimated_hours": 3,
+      "dependencies": [
+      ]
+    }]
+  }
+}

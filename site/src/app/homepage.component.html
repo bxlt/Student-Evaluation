@@ -1,0 +1,350 @@
+<div class="ui left vertical sidebar menu home_menu">
+  <a class="header item"
+      routerLink="/home">
+    <div class="middle aligned content">
+      <div class="header">
+        <div class="ui mini image">
+          <img class="ui mini image" [src]="teamLogo">
+        </div>
+        Home
+      </div>
+    </div>
+  </a>
+  <a class="item"
+    [class.active]="selected=='deliverable'"
+    (click)="navigateTo('/deliverables')">
+    <div class="header">Deliverables</div>
+  </a>
+  <div class="item">
+    <div class="header">Documentation</div>
+    <div class="menu">
+      <a class="item"
+        (click)="navigateTo('/agreement')">
+        Team Agreement
+      </a>
+      <a class="item"
+        (click)="navigateTo('/persona')">
+        Personas
+      </a>
+      <a class="item"
+        (click)="navigateTo('/user_story')">
+        User Stories
+      </a>
+      <a class="item"
+        (click)="navigateTo('/code_review')">
+        Code Review Strategy
+      </a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="header">Sprint Backlogs</div>
+    <div class="menu">
+      <a class="item"
+        (click)="navigateTo('/sprint/0')">
+        Sprint 0
+      </a>
+      <a class="item"
+        (click)="navigateTo('/sprint/1')">
+        Sprint 1
+      </a>
+      <a class="item"
+        (click)="navigateTo('/sprint/2')">
+        Sprint 2
+      </a>
+      <a class="item"
+        (click)="navigateTo('/sprint/3')">
+        Sprint 3
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="ui top fixed large inverted home borderless menu"
+  [class.open]="openMenu" 
+  [class.secondary]="openMenu"
+  [class.inverted]="openMenu">
+  <div class="ui container">
+    <a class="header item" (click)="toggleSidebar()">
+      <img [src]="teamLogo" class="ui centered mini image">
+    </a>
+    <a class="item"
+      [scrollTo]="'team_photo'">
+      Team
+    </a>
+    <a class="item"
+      [scrollTo]="'team_members'">
+      Members
+    </a>
+    <a class="item"
+      (click)="navigateTo('/deliverables')">
+      Deliverables
+    </a>
+    <div class="right menu">
+      <div class="item">
+        <a class="ui white icon button" href="https://github.com/CSCC01F17/L02_15" target="_blank">
+          <i class="github icon"></i>
+          Github
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="home img">
+  <div class="ui container">
+    <div class="home introduction">
+      <img class="ui centered medium image" src="assets/img/team.logo.jpg">
+    </div>
+  </div>
+</div>
+<div id="team_photo"></div>
+<div class="ui stackable very relaxed center aligned grid container" style="margin-top: 100px;">
+  <div class="row">
+    <div class="ten wide column">
+      <img class="ui fluid bordered image" src="assets/img/team.photo.jpg">
+      <h1 class="ui team header">The Team</h1>
+    </div>
+  </div>
+</div>
+
+<div class="ui strength basic segment">
+  <div class="ui stackable very relaxed two column grid container">
+    <div class="center aligned column">
+      <h1 class="ui icon header">
+        <i class="star icon"></i>
+        Our Strengths
+      </h1>
+    </div>
+    <div class="left aligned column">
+      <div class="ui large list">
+        <a class="item">
+          <i class="yellow star icon"></i>
+          <div class="content">
+            <div class="header">Knowledge in a variety of programming languages</div>
+            <div class="description">
+              Every team member has a good grasp of Java, Python, and C
+            </div>
+          </div>
+        </a>
+        <a class="item">
+          <i class="yellow star icon"></i>
+          <div class="content">
+            <div class="header">Knowledge of several programming paradigms/concepts</div>
+            <div class="description">
+              Examples: Object Oriented Programming, Data Structures
+            </div>
+          </div>
+        </a>
+        <a class="item">
+          <i class="yellow star icon"></i>
+          <div class="content">
+            <div class="header">Experienced in development cycles</div>
+            <div class="description">
+              All team members have working experience in agile and waterfall software development methodologies
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ui goals secondary segment">
+  <div class="ui center aligned container">
+  <h2 class="ui large header">Goals</h2>
+    <div class="ui three column internally celled relaxed stackable grid">
+      <div class="row">
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="tasks icon"></i>
+                Meet Deadlines
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>We expect to deliver working product features by or before the deadlines we’ve provided for ourselves.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="search icon"></i>
+                Transparency
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>Upholding honesty and integrity between each other as well as the TA and professor. We want to accomplish this with a "no-secrets" policy and be as open as possible with issues.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="checked calendar icon"></i>
+                Attend all Meetings
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>Ensuring every member makes time out of their schedules to meet and update each other with the progress of each component in the project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="comments outline icon"></i>
+                Communication
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>
+                We want to articulate our issues and comments through the defined methods of communication and expect teammates to respond within the allocated time.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="check icon"></i>
+                Have working product
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>Every release cycle should end with a functional, well-tested product that the consumer can use.</p>
+            </div>
+          </div>
+        </div>
+        <div class="column">
+          <div class="reveal container">
+            <div class="top element">
+              <h3 class="ui icon header">
+                <i class="smile icon"></i>
+                Have Fun!!!
+              </h3>
+            </div>
+            <div class="bottom element">
+              <p>Making sure everyone enjoys collaborating and working on the project.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="team_members"></div>
+<div class="ui container" style="margin-top: 100px;">
+  <div class="members">
+    <h1 class="ui center aligned header">Team Members</h1>
+    <div class="ui divided items">
+      <!-- vethursan.jegatheeswaran bio -->
+      <div class="item">
+        <div class="image">
+          <img src="assets/img/vethursan.jegatheeswaran.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Vethursan Jegatheeswaran</a>
+          <div class="meta">
+            <span>3rd Year Computer Science Student</span>
+          </div>
+          <div class="description">
+<p>
+
+Vethursan Jegatheeswaran is a 3rd year student studying Computer Science. Vethursan has experience working in web development from front-end technologies such as jQuery to back-end technologies such as PHP. Vethursan has experience working in an agile software development environments with experience creating user stories, sprints and scrum backlogs. Vethursan is always looking to learn new things and is able to learn them very quickly when needed. With the broad range of skills, experience and interests, Vethursan is able to contribute to various segments of the software development process. 
+
+</p>
+          </div>
+          <div class="extra">
+          Strong in: Python, Java, C, PHP, SQL (PostgreSQL, MySQL), PyUnit, JUnit 
+          <br/>
+          Familiar with: jQuery, Bootstrap, HTML/CSS
+          </div>
+        </div>
+      </div>
+
+      <!-- rakin.uddin bio -->
+      <div class="item">
+        <div class="image">
+          <img class="ui large image" src="assets/img/rakin.uddin.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Rakin Uddin</a>
+          <div class="meta">
+            <span>3rd Year Computer Science Student - Back End Developer</span>
+          </div>
+          <div class="description">
+<p>
+
+Rakin Uddin is a 3rd year student pursuing a degree in Computer Science with a specialist in Software Engineering. With more than a year of professional development experience in fields such as full stack web development, cloud infrastructure development and automated user-acceptance/regression testing with a variety of software tools, Rakin is an indvidual flexible enough to take on tasks related to the various parts in the development lifecycle of any application. In the events of new challenges, Rakin will quickly learn new technologies and software necessary to improve the quality of applications being made.
+
+</p>
+          </div>
+          <div class="extra">
+            Strong in: Java, Python, C#, C, SQL (Oracle), JSON/XML, PyUnit, JUnit, GDB
+            <br/>
+            Familiar with: HTML/CSS, JavaScript, AngularJS, Entity Framework
+          </div>
+        </div>
+      </div>
+
+      <!-- bill.tan bio -->
+      <div class="item">
+        <div class="image">
+          <img class="ui large image" src="assets/img/bill.tan.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Bill Tan</a>
+          <div class="meta">
+            <span>3rd Year Computer Science Student</span>
+          </div>
+          <div class="description">
+<p>
+
+Bill Tan is a 3rd year Computer Science specialist student. He's built skills in front-end web development, QA, SQL, as well as software development cycles from previous work experience. Excluding course work, Bill has interests towards developing skills learned in class during his leisure time, such as writing a music control application in C. Besides coding, he spends a large amount of time exploring the theoretical side of computer science, such as Turing machines and P/NP problems, with distinguished grades in related courses. From previous experiences, Bill has a fast-paced learning cycle towards new software skills when he sees new challenges.
+
+</p>
+          </div>
+          <div class="extra">
+        Strong in: Python, Java, C, SQL (PostgreSQL/MySQL), Unit testing and Integration testing
+          <br/>
+          Familiar with: R, Ruby, Matlab
+          </div>
+        </div>
+      </div>
+
+      <!-- tianxiang.gao bio -->
+      <div class="item">
+        <div class="image">
+          <img class="ui large image" src="assets/img/tianxiang.gao.jpg">
+        </div>
+        <div class="content">
+          <a class="header">Kevin Gao</a>
+          <div class="meta">
+            <span>3rd Year Computer Science Student - Full Stack Developer</span>
+          </div>
+          <div class="description">
+<p>
+Kevin is a 3rd year Computer Science student. With working knowledge in front-end frameworks such as Angular, back-end frameworks such as NodeJS, Kevin has taken an extreme interest in Web Development. Some projects that he has contributed to includes the code review and enhancement of UofT's eService webpage. In addition to understanding web development, Kevin always pursues to learn new things and is able to swiftly grasp new concepts. In his free time, Kevin enjoys building new webpages and looking into new ways to build them. Additionally, Kevin has a passion for game development and one of his prime personal goals include the creation of his own game. 
+
+</p>
+          </div>
+          <div class="extra">
+            Strong in: Javascript, MySQL/NoSQL, Angular, AngularJS, NodeJS, Python, Scala, HTML/CSS
+            <br/>
+            Familiar with: React, Haskell
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ui divider"></div>
+</div>
+<tpets-footer></tpets-footer>

@@ -1,0 +1,146 @@
+<div style="min-height: 100%;">
+  <t-sidebar [selected]="'user_story'">
+    <div class="ui basic indented segment" id="user_story">
+      <h1 class="ui header">
+        User Stories
+      </h1>
+      <div class="ui compact menu">
+        <div class="header item">Versions:</div>
+        <a class="item" *ngFor="let vers of versions"
+          [class.active]="vers.code==selectedVersion"
+          (click)="switchVersion(vers.code)">
+          {{vers.display}}
+        </a>
+      </div>
+    </div>
+    <div class="ui divider"></div>
+    <div id="user_story_content" *ngIf="found">
+      <div class="ui basic indented segment">
+        <div class="ui grid">
+          <div class="row">
+            <div class="ten wide column">
+              <div class="ui segment">
+                <h4 class="ui cursor dividing header" (click)="showLegend=!showLegend">
+                  <i class="expand icon" *ngIf="!showLegend"></i>
+                  <i class="compress icon" *ngIf="showLegend"></i>
+                  Legend
+                </h4>
+                <div *ngIf="showLegend">
+                  <div class="ui small header">Priority</div>
+                  <table class="ui basic table">
+                    <tbody>
+                      <tr class="priority one">
+                        <td width="20%">
+                          <b>Must have</b>
+                          <br>
+                          (Rating: 80 ~ 100)
+                        </td>
+                        <td>These are the core features. The product cannot function without these features.</td>
+                      </tr>
+                      <tr class="priority two">
+                        <td>(Rating: 60 ~ 79)</td>
+                        <td></td>
+                      </tr>
+                      <tr class="priority three">
+                        <td>
+                          <b>Should have</b>
+                          <br>
+                          (Rating: 40 ~ 59)
+                        </td>
+                        <td>These features are the main features the client would like but the product can still function without them.</td>
+                      </tr>
+                      <tr class="priority four">
+                        <td>(Rating: 20 ~ 39)</td>
+                        <td></td>
+                      </tr>
+                      <tr class="priority five">
+                        <td>
+                          <b>Nice to have</b>
+                          <br>
+                          (Rating: 0 ~ 19)
+                        </td>
+                        <td>These features were not directly requested by client but it would be nice to have. Most of these features are <i>quality of life</i> features</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="ui small header">Status</div>
+                  <table class="ui basic table">
+                    <thead>
+                      <tr>
+                        <th width="20%">Status</th>
+                        <th>Description</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td><b>Epic</b></td>
+                        <td>An Epic waiting to be divided up into user stories.</td>
+                      </tr>
+                      <tr>
+                        <td><b>Pending</b></td>
+                        <td>A user story waiting for the approval of the team.</td>
+                      </tr>
+                      <tr>
+                        <td><b>New</b></td>
+                        <td>A user story that is ready to be started.</td>
+                      </tr>
+                      <tr>
+                        <td><b>In-Progress</b></td>
+                        <td>A user story that is in progress.</td>
+                      </tr>
+                      <tr>
+                        <td><b>On-hold</b></td>
+                        <td>A user story that's put on hold.</td>
+                      </tr>
+                      <tr>
+                        <td><b>Deleted</b></td>
+                        <td>A user story that is deleted. It's kept in case we decide to add it back.</td>
+                      </tr>
+                      <tr>
+                        <td><b>Completed</b></td>
+                        <td>A user story that is completed.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="fifteen wide column">
+              <table class="ui celled table" id="user_story_table">
+                <thead>
+                  <tr>
+                    <th width="10%" (click)="sortUserStories();">Priority</th>
+                    <th width="10%">Story Points</th>
+                    <th width="15%">Status</th>
+                    <th>User Story</th>
+                    <th width="30%">Notes</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let us of userStories" class="priority" [ngClass]="us.class">
+                    <td>{{us.priority}}</td>
+                    <td>{{us.story_points || 'N/A'}}</td>
+                    <td>
+                      <div class="ui label"
+                        [ngClass]="statusClass[us.status]"
+                        >{{us.status}}
+                      </div>
+                    </td>
+                    <td>{{us.user_story}}</td>
+                    <td>{{us.note}}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="!found">
+      <t-notfound-item></t-notfound-item>
+    </div>
+  </t-sidebar>
+</div>
+<tpets-footer></tpets-footer>

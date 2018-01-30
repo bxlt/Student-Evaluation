@@ -1,0 +1,71 @@
+<div class="ui left fixed vertical menu" >
+  <a class="header item"
+      routerLink="/home">
+    <div class="middle aligned content">
+      <div class="header">
+        <div class="ui mini image">
+          <img class="ui mini image" [src]="teamLogo">
+        </div>
+        Home
+      </div>
+    </div>
+  </a>
+  <a class="item"
+    [class.active]="selected=='deliverable'"
+    routerLink="/deliverables">
+    <div class="header">Deliverables</div>
+  </a>
+  <div class="item">
+    <div class="header">Documentation</div>
+    <div class="menu">
+      <a class="item"
+        [class.active]="selected=='agreement'"
+        routerLink="/agreement">
+        Team Agreement
+      </a>
+      <a class="item"
+        [class.active]="selected=='persona'"
+        routerLink="/persona">
+        Personas
+      </a>
+      <a class="item"
+        [class.active]="selected=='user_story'"
+        routerLink="/user_story">
+        User Stories
+      </a>
+      <a class="item"
+        [class.active]="selected=='code_review'"
+        routerLink="/code_review">
+        Code Review Strategy
+      </a>
+    </div>
+  </div>
+  <div class="item">
+    <div class="header">Sprint Backlogs</div>
+    <div class="menu">
+      <a class="item"
+        [class.active]="selected=='sprint_0'"
+        routerLink="/sprint/0">
+        Sprint 0
+      </a>
+      <a class="item"
+        [class.active]="selected=='sprint_1'"
+        routerLink="/sprint/1">
+        Sprint 1
+      </a>
+      <a class="item"
+        [class.active]="selected=='sprint_2'"
+        routerLink="/sprint/2">
+        Sprint 2
+      </a>
+      <a class="item"
+        [class.active]="selected=='sprint_3'"
+        routerLink="/sprint/3">
+        Sprint 3
+      </a>
+    </div>
+  </div>
+</div>
+<div style="margin-left: 15rem">
+  <ng-content></ng-content>
+</div>

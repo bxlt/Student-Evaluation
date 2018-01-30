@@ -1,0 +1,123 @@
+{
+  "versions":{
+    "user_story": "/user_story/2",
+    "persona": "/persona/2"
+  },
+  "start_date": "10-23-2017",
+  "end_date": "10-30-2017",
+  "burndown": "/assets/img/burndown/burndown_1.png",
+  "zenhub": "https://github.com/CSCC01F17/L02_15/pulls#boards?repos=103757623",
+  "user_stories": [{
+    "user_story": "As a professor, I must be able to create problems so students can have problems to do.",
+    "story_points": 28
+  },{
+    "user_story": "As a student, I must be able to select and a view a problem so I can practise on it.",
+    "story_points": 9
+  }],
+  "tasks": [{
+    "task": "Set-up structure of the back end",
+    "story_points": 10,
+    "description": "Set up  SQL in the back end, make a temporary route to fetch information from the database, figure out the structure of the routes/files, and document the methodology of adding new routes."
+  },{
+    "task": "Create SQL schemas for adding questions",
+    "story_points": 1.5,
+    "description": "Create all CREATE TABLE schemas for questions for SQL so we can create the tables in MySQL."
+  },{
+    "task": "Design the API route to add questions",
+    "story_points": 4,
+    "description": "Design the API route for the front end to add questions to the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Design the API route to get questions",
+    "story_points": 4,
+    "description": "Design the API route for the front end to getting questions from the database. Think about input, output, and the SQL query."
+  },{
+    "task": "Create API route to add questions to database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for adding questions and implement the API route."
+  },{
+    "task": "Create API route for getting questions from database",
+    "story_points": 2,
+    "description": "Follow the design of the API route for getting questions and implement the API route."
+  },{
+    "task": "Create button to save the questions into the database",
+    "story_points": 1,
+    "description": "Create button to save the questions into the database."
+  },{
+    "task": "Create an input field to get whichever question to display (search)",
+    "story_points": 2,
+    "description": "Create an input field that will 'search' for a specific question"
+  },{
+    "task": "Create a new page in the front-end for displaying a question",
+    "story_points": 4,
+    "description": "Create a new page in the front-end for displaying a question."
+  },{
+    "task": "Create text field in the front-end that displays the question",
+    "story_points": 3,
+    "description": "Create text field in the front-end that displays the question."
+  },{
+    "task": "Document the sprint by adding in the sprint backlog and burndown chart",
+    "story_points": 3,
+    "description": "Create new tab in front-end for `Sprint Backlogs`. Add the sprint back log with the user story for the sprint, the tasks that were broken down for the sprint, the estimated time it would take for each tasks, descriptions for each tasks, assignment of the tasks for each team member, and add a burndown chart."
+  }],
+  "task_division": {
+    "Rakin":[{
+      "task": "Set-up structure of the back end",
+      "estimated_hours": 10,
+      "dependencies": []
+    }],
+    "Vethursan":[{
+      "task": "Create button to save the questions into the database",
+      "estimated_hours": 1,
+      "dependencies": []
+    },{
+      "task": "Create an input field to get whichever question to display (search)",
+      "estimated_hours": 4,
+      "dependencies": []
+    },{
+      "task": "Create a new page in the front-end for displaying a question",
+      "estimated_hours": 2,
+      "dependencies": []
+    },{
+      "task": "Create text field in the front-end that displays the question",
+      "estimated_hours": 3,
+      "dependencies": [
+        "Create a new page in the front-end for displaying a question (Vethursan)"
+      ]
+    }],
+    "Bill":[{
+      "task": "Create SQL schemas for adding questions",
+      "estimated_hours": 1.5,
+      "dependencies": []
+    },{
+      "task": "Create API route to add questions to database",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Design the API route to add questions (Kevin)"
+      ]
+    },{
+      "task": "Create API route for getting questions from database",
+      "estimated_hours": 2,
+      "dependencies": [
+        "Design the API route to getting questions (Kevin)"
+      ]
+    }],
+    "Kevin":[{
+      "task": "Design the API route to adding questions",
+      "estimated_hours": 4,
+      "dependencies": [
+        "Create SQL schemas for adding questions"
+      ]
+    },{
+      "task": "Design the API route to getting questions",
+      "estimated_hours": 4,
+      "dependencies": [
+        "Create SQL schemas for adding questions"
+      ]
+    },{
+      "task": "Update the documentation and add Sprint 1 backlog + Burndown chart.",
+      "estimated_hours": 3,
+      "dependencies": [
+      ]
+    }]
+  }
+}

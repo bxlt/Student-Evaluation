@@ -1,0 +1,151 @@
+[{
+  "priority": 100,
+  "user_story": "As a professor, I must be able to create problems so students can have problems to do.",
+  "status": "Completed",
+  "note": "",
+  "story_points": 28
+},{
+  "priority": 100,
+  "user_story": "As a student, I must be able to select and a view a problem so I can practise on it.",
+  "status": "In-Progress",
+  "note": "",
+  "story_points": 9
+},{
+  "priority": 95,
+  "user_story": "As a professor, I should be able to create an assignment consisting of problems that I created so students have a set of problems to do.",
+  "status": "In-Progress",
+  "note": "",
+  "story_points": 12
+},{
+  "priority": 80,
+  "user_story": "As a professor, I should be able to post an assignment for my students so they can complete it.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 8
+},{
+  "priority": 75,
+  "user_story": "As a professor, I should be able to set a deadline for my assignments so students cannot submit afterwards.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 2
+},{
+  "priority": 70,
+  "user_story": "As a professor, I should be able to assign a grade to a student's submission so the student knows how well he/she did.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 2
+},{
+  "priority": 70,
+  "user_story": "As a student, I should be able to see my grade for a submission so I know how well I did.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 2
+},{
+  "priority": 60,
+  "user_story": "As a professor, I should be able to add feedback to a student's assignment so the student knows where they can improve in.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 4
+},{
+  "priority": 50,
+  "user_story": "As a professor, I should be able to edit the deadline and any details of an assignment so I don't need to re-create the assignment if I made a mistake.",
+  "status": "Epic",
+  "note": "",
+  "story_points": 5
+},{
+  "priority": 50,
+  "user_story": "As a professor, I should be able to set details when I create my assignments for both the students and for myself. Details can include: Name, Total Mark, and weight of assignment.",
+  "status": "Epic",
+  "note": "",
+  "story_points": 5
+},{
+  "priority": 50,
+  "user_story": "As a professor, I should be able to create a class for a set of students so students know which class they're in.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 10
+},{
+  "priority": 45,
+  "user_story": "As a student, I should be able to see the details of an assignment so I have a better understanding of what is expected of me for the assignment.",
+  "status": "Epic",
+  "note": "",
+  "story_points": 3
+},{
+  "priority": 70,
+  "user_story": "As a student, I should be able to view all the problems so I can easily select the ones that are required.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 3
+},{
+  "priority": 60,
+  "user_story": "As a student I should be able submit solutions to assignments so I can receive feedbacks from an instructor.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 15
+},{
+  "priority": 20,
+  "user_story": "As a professor, it would be nice to be able to create a problem using LaTeX syntax so I can have my assignments styled better.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 15
+},{
+  "priority": 20,
+  "user_story": "As a professor, it would be nice to set up template questions where the remaining information is auto-generated so that I can reuse them in multiple assignments",
+  "status": "Epic",
+  "note": "",
+  "story_points": 20
+},{
+  "priority": 10,
+  "user_story": "As a professor, it would be nice to be able to export assignment results into an Excel file so I can combine them with marks from term tests and exams.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 4
+},{
+  "priority": 5,
+  "user_story": "As a student, it would be nice if I received a notification through email that a new assignment has been posted.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 8
+},{
+  "priority": 5,
+  "user_story": "As a student, it would be nice if I could see the average and the median marks for each assignment.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 4
+},{
+  "priority": 3,
+  "user_story": "As a student, it would be nice to export the results of an assignment to an Excel file so I can combine them with marks from term tests and exams",
+  "status": "Pending",
+  "note": "",
+  "story_points": 7
+},{
+  "priority": 5,
+  "user_story": "As a professor, it would be nice to allow students to have multiple chances for some assignments.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 6
+},{
+  "priority": 10,
+  "user_story": "As a student, it would be nice if I could see a list of assignments I have not completed yet.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 3
+},{
+  "priority": 30,
+  "user_story": "As a student, I should be able to view the answers to an assignment after the deadline.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 3
+},{
+  "priority": 30,
+  "user_story": "As a professor, I should be able to add answers to an assignment and have it be visible to students after the deadline.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 7
+},{
+  "priority": 10,
+  "user_story": "As a professor, it would be nice to have a page that explains the functionality of the application so students don't get lost navigating the page.",
+  "status": "Pending",
+  "note": "",
+  "story_points": 4
+}]

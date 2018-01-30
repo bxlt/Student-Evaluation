@@ -1,0 +1,143 @@
+{
+  "versions":{
+    "user_story": "/user_story/3",
+    "persona": "/persona/3"
+  },
+  "start_date": "11-14-2017",
+  "end_date": "11-20-2017",
+  "burndown": "/assets/img/burndown/burndown_3.png",
+  "sprint_plan": "/assets/img/burndown/sprint_plan_3.png",
+  "code_review": {
+    "link": "https://www.youtube.com/embed/U1d2b7Sy6Xg",
+    "summaries": {
+      "rakin":[
+        "We should handle the processing of user input by a separate back-end service; everything is done in the GUI which is difficult to scale",
+        "Naming conventions in the SQL schemas should be standardized. Right now some files have fully capitalized syntax and some are not which isn't clean and professional",
+        "Imports for various python libraries should be included in the requirements_dev.txt file with their specific versions locked (i.e., mysql connector library should be locked at version 2.1.6)",
+        "Have some kind of master script to enable a one-touch build. Right now we have to build the application by going into multiple directories and running their build scripts"
+      ],
+      "bill":[
+        "In our current progress, we haven't tested our method of database operation and integration test for the gui.",
+        "There are some test cases needed to be add. We almost finished the first user story.",
+        "Beside the rigorous progress of our project building, the realiability of our code does not have any assurance after completion.",
+        "Due to the type of our code, unit testing and integration test should be implemented individually. Those api functions that modifity the database should be tested by various unit testing cases. Integration test can make sure our program store the correct result from user input on the GUI. However, the validation for sql script at backend will be manually implement by analyzing the query one by one which is different from those two testing methods above."
+      ],
+      "vethursan":[
+        "We should break our GUI down into separate classes which will make it easier to work with, such as testing each page explicitly.",
+        "Separating the abstract page class will also make it easier to implement future pages."
+      ],
+      "kevin":[
+        "We should have better documentation for the functions regarding database so new developers can ramp up on the system quicker.",
+        "The MySQL create schemas should be concactenated into a single script so we don't have any script dependencies and we should also form a transaction so that either everything is created, or nothing is."
+      ]
+    }
+  },
+  "reflections": {
+    "good": [
+      "Ironed out issues in building the application by running it on other machines (i.e., Vethursan's)",
+      "Finished building out databaseAPI package according to user specs",
+      "Most of the tasks, in relation to previous sprints, were completed on time",
+      "Discussed current tasks with further explanation so everyone understands what needs to be done clearly"
+    ],
+    "bad": [
+      "Unable to connect the backend with the frontend yet (still in progress)",
+      "Code review revealed some large issues (i.e., design of our user-input processing) which may cause setbacks in main development cycle because we need to address these problems",
+      "There was a huge delay of our code review meeting which left a lot of unproductive time as members joined in.",
+      "Spent a lot of time fixing issues with building the application on my machine which caused delays in development.",
+      "My part of this project was mainly on sql back end and implement database api. When i was writing those sql scripts, there existed inconsistency on variable naming and cases of sql key words. It brought some difficulty to my teammates’ reading."
+    ]
+  },
+  "sprint_tasks_before": "/assets/img/burndown/5.0_board_before.png",
+  "sprint_tasks_after": "/assets/img/burndown/5.0_board_after.png",
+  "sprint_exec": "/assets/img/burndown/sprint_exec_3.png",
+  "zenhub": "https://github.com/CSCC01F17/L02_15/pulls#boards?repos=103757623",
+  "user_stories": [{
+    "user_story": "As a student, I must be able to select and view a problem so I can practise on it.",
+    "story_points": 13
+  },{
+    "user_story": "As a professor, I should be able to create an assignment consisting of problems that I created so students have a set of problems to do.",
+    "story_points": 17
+  }],
+  "tasks": [{
+    "task": "Connect back-end to front-end",
+    "story_points": 4,
+    "description": "Connect the back-end with the front-end. Example: when you save a question on the front end, it queries and saves it into the database."
+  },{
+    "task": "Refactor assignment schemas",
+    "story_points": 2,
+    "description": "Refactor the schemas for assignments and separate the associate entity into it's own entity."
+  },{
+    "task": "Add assignments page to the front-end",
+    "story_points": 3,
+    "description": "Add assignments page to the front-end to display detailed information for an assignment (name, due-date, etc)."
+  },{
+    "task": "Add text box for students to add answers",
+    "story_points": 1,
+    "description": "Add text box for students to add answers."
+  },{
+    "task": "Add text box for professors to add solutions.",
+    "story_points": 1,
+    "description": "Add text box for professors to add solutions."
+  },{
+    "task": "Schema for student answers.",
+    "story_points": 2,
+    "description": "Create CREATE TABLE schemas for student answers."
+  },{
+    "task": "Fix documentation",
+    "story_points": 9,
+    "description": "Add sprint report and fix burndown chart into sprint backlog."
+  },{
+    "task": "Sprint Reports",
+    "story_points": 4,
+    "description": "Add sprint reports for everyone."
+  },{
+    "task": "Manage ZenHub",
+    "story_points": 6,
+    "description": "Add tasks and manage the tasks on ZenHub."
+  }],
+  "task_division": {
+    "Rakin":[{
+      "task": "Manage and add tasks on ZenHub",
+      "estimated_hours": 5,
+      "dependencies": []
+    },{
+      "task": "Add text box for students to add answers",
+      "estimated_hours": 1,
+      "dependencies": [
+        "Schema for student answers. (Bill)"
+      ]
+    }],
+    "Vethursan":[{
+      "task": "Connect back-end to front-end",
+      "estimated_hours": 4,
+      "dependencies": []
+    },{
+      "task": "Add assignments page to the front-end",
+      "estimated_hours": 3,
+      "dependencies": []
+    }],
+    "Bill":[{
+      "task": "Refactor assignment schemas",
+      "estimated_hours": 1,
+      "dependencies": []
+    },{
+      "task": "Schema for student answers.",
+      "estimated_hours": 2,
+      "dependencies": []
+    },{
+      "task": " Add text box for professors to add solutions.",
+      "estimated_hours": 2,
+      "dependencies": []
+    }],
+    "Kevin":[{
+      "task": "Fix Burndown chart (day by day)",
+      "estimated_hours": 6,
+      "dependencies": [
+      ]
+    },{
+      "task": "Add Sprint Report.",
+      "estimated_hours": 4,
+      "dependencies": []
+    }]
+  }
+}
