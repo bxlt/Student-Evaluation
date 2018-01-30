@@ -1,0 +1,1 @@
+# MySQL queries that will populate the database with initial data

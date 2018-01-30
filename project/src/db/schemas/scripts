@@ -1,0 +1,5 @@
+for script in `ls ./*sql`
+do
+mysql -h localhost -u root -ptpets < $script
+done
+

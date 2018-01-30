@@ -1,0 +1,9 @@
+USE appDB;
+
+CREATE TABLE IF NOT EXISTS User(
+	UserID INTEGER NOT NULL Auto_increment,
+	First_Name VARCHAR(100) NOT NULL,
+    Last_Name VARCHAR(100) NOT NULL,
+    Authority BOOLEAN NOT NULL,
+    PRIMARY KEY (UserID)
+);
